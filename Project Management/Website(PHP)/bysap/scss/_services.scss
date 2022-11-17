@@ -1,0 +1,45 @@
+.cardbody {
+    border: none;
+    outline: none;
+}
+
+.cardbody p {
+    color: grey;
+}
+
+.circle {
+    height: 70px;
+    width: 70px;
+    background-color: #CEDCFE;
+    color: black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.cardbody:hover .circle {
+    background-color: black;
+    color: whitesmoke;
+    transition: 0.4s;
+}
+
+.serviceshr {
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.circle {
+    .fas,
+    .fa {
+        color: white;
+    }
+}
+
+.card-service {
+    border: 1px solid #CEDCFE;
+    box-shadow: 10px 10px 5px #CEDCFE;
+    border-radius: 20px;
+}

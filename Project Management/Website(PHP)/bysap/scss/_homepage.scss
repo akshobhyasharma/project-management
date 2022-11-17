@@ -1,0 +1,149 @@
+/* home page */
+
+.index-container {
+    width: 100% !important;
+    margin: 0%;
+    border: 1px solid red;
+}
+
+.slide-row {
+    height: 400px;
+    position: relative;
+}
+
+.menu-container {
+    z-index: 2;
+    position: absolute;
+}
+
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.resp-img {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in;
+}
+
+.dark-text {
+    z-index: 4;
+    left: 5%;
+    top: 5%;
+    font-weight: 700;
+    transition: 0.5s ease-in;
+}
+
+.img-link {
+    color: black;
+}
+
+.image-overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(105, 103, 103);
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+
+.img-link:hover {
+    color: whitesmoke;
+    opacity: 1;
+}
+
+.img-link:hover .image-overlay {
+    opacity: 0.4;
+}
+
+.img-link .btn {
+    transition: 0.5s ease-in;
+}
+
+.img-link:hover .btn {
+    transform: translateY(-4rem);
+}
+
+.img-link {
+    .btn:hover {
+        background-color: darken(#fff, 9%);
+        border-color: darken(#fff, 9%);
+    }
+}
+
+.inner-navbar {
+    z-index: 200;
+}
+
+.index-heart {
+    justify-content: space-between;
+}
+
+.slide-row {
+    #carouselExampleControls {
+        .carousel-control-prev {
+            height: 50% !important;
+            margin: auto 0;
+        }
+        .carousel-control-next {
+            height: 50% !important;
+            margin: auto 0;
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .inner-navbar {
+        .navbar-toggler {
+            &:focus {
+                box-shadow: 0 0 0 0;
+            }
+        }
+        #secondaryNavbar {
+            background-color: rgba($color: #000, $alpha: 0.9);
+            margin-top: 10px;
+            border-radius: 1rem;
+            .navbar-nav {
+                li {
+                    .text-dark {
+                        color: white !important;
+                    }
+                    .underline-dark::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background: white;
+                        opacity: 0;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    .underline-dark:hover::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:820px) {
+    #secondaryNavbar
+    {
+        a
+        {
+            font-size: 0.75em;
+        }
+    }
+
+}
+.fa-star,
+.fa-star,
+.fa-star-half-alt {
+    color: #ecc30c;
+}

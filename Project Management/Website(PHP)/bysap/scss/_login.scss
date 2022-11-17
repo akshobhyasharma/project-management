@@ -1,0 +1,14 @@
+/* login */
+
+.login-form {
+    padding: 20px;
+    width: 100%;
+    .login-button {
+        background-color: #7cc5e4 !important;
+        border: none;
+        &:hover {
+            background-color: black !important;
+            color: white;
+        }
+    }
+}

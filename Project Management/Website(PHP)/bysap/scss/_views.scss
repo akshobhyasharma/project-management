@@ -1,0 +1,60 @@
+.covid-container {
+    .title-pg {
+        text-align: center;
+        h2 {
+            font-weight: 600;
+        }
+    }
+    .pos {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 80px;
+        z-index: 0;
+    }
+    a {
+        color: #5C4033;
+    }
+    a:hover {
+        color: #BC8F8F;
+    }
+    .paragraph1
+    {
+        font-size: 20px;
+    }
+    
+   
+    .paragraph3 {
+        padding: 10px 15px;
+        margin: 20px;
+        font-size: 20px;
+    }
+    .list {
+        padding-left: 90px;
+       
+        font-size: 20px;
+        color: #696969;
+    }
+    @media(max-width:560px) {
+        .list {
+            padding-left: 0px;
+        }
+    }
+    .story-1 p {
+        padding: 0px 15px;
+        color: #696969;
+        font-size: 20px;
+    }
+    h3 {
+        padding: 10px 15px;
+        padding-top: 0;
+        padding-bottom: 0px;
+        font-size: 28px;
+    }
+    .upd-date {
+        font-style: italic;
+        padding-left: 18px;
+    }
+    h5 {
+        padding: 0 15px;
+    }
+}

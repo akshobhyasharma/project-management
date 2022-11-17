@@ -1,0 +1,154 @@
+--Users Trigger--
+
+DROP TRIGGER user_id_trigger;
+CREATE OR REPLACE TRIGGER user_id_trigger
+BEFORE INSERT ON Users
+FOR EACH ROW
+BEGIN
+    IF :NEW.user_id IS NULL THEN
+        SELECT seq_user_id.NEXTVAL INTO :NEW.user_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+
+--Shop Trigger--
+
+DROP TRIGGER shop_no_trigger;
+CREATE OR REPLACE TRIGGER shop_no_trigger
+BEFORE INSERT ON Shop
+FOR EACH ROW
+BEGIN
+    IF :NEW.shop_no IS NULL THEN
+        SELECT seq_shop_no.NEXTVAL INTO :NEW.shop_no FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Product Trigger--
+
+DROP TRIGGER product_id_trigger;
+CREATE OR REPLACE TRIGGER product_id_trigger
+BEFORE INSERT ON Product
+FOR EACH ROW
+BEGIN
+    IF :NEW.product_id IS NULL THEN
+        SELECT seq_product_id.NEXTVAL INTO :NEW.product_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Images Trigger--
+
+DROP TRIGGER image_id_trigger;
+CREATE OR REPLACE TRIGGER image_id_trigger
+BEFORE INSERT ON Images
+FOR EACH ROW
+BEGIN
+    IF :NEW.image_id IS NULL THEN
+        SELECT seq_image_id.NEXTVAL INTO :NEW.image_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Review Trigger--
+
+DROP TRIGGER review_id_trigger;
+CREATE OR REPLACE TRIGGER review_id_trigger
+BEFORE INSERT ON Review
+FOR EACH ROW
+BEGIN
+    IF :NEW.review_id IS NULL THEN
+        SELECT seq_review_id.NEXTVAL INTO :NEW.review_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Cart Trigger--
+
+DROP TRIGGER cart_id_trigger;
+CREATE OR REPLACE TRIGGER cart_id_trigger
+BEFORE INSERT ON Cart
+FOR EACH ROW
+BEGIN
+    IF :NEW.cart_id IS NULL THEN
+        SELECT seq_cart_id.NEXTVAL INTO :NEW.cart_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Cart_Items Trigger--
+
+DROP TRIGGER cart_item_no_trigger;
+CREATE OR REPLACE TRIGGER cart_item_no_trigger
+BEFORE INSERT ON Cart_Items
+FOR EACH ROW
+BEGIN
+    IF :NEW.cart_item_no IS NULL THEN
+        SELECT seq_cart_item_no.NEXTVAL INTO :NEW.cart_item_no FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Collection_Slot Trigger--
+
+DROP TRIGGER slot_no_trigger;
+CREATE OR REPLACE TRIGGER slot_no_trigger
+BEFORE INSERT ON Collection_Slot
+FOR EACH ROW
+BEGIN
+    IF :NEW.slot_no IS NULL THEN
+        SELECT seq_slot_no.NEXTVAL INTO :NEW.slot_no FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Orders Trigger--
+
+DROP TRIGGER order_id_trigger;
+CREATE OR REPLACE TRIGGER order_id_trigger
+BEFORE INSERT ON Orders
+FOR EACH ROW
+BEGIN
+    IF :NEW.order_id IS NULL THEN
+        SELECT seq_order_id.NEXTVAL INTO :NEW.order_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+--Order_Product Trigger--
+
+DROP TRIGGER order_product_id_trigger;
+CREATE OR REPLACE TRIGGER order_product_id_trigger
+BEFORE INSERT ON Order_Product
+FOR EACH ROW
+BEGIN
+    IF :NEW.order_product_id IS NULL THEN
+        SELECT seq_order_product_id.NEXTVAL INTO :NEW.order_product_id FROM SYS.DUAL;
+    END IF;
+END;
+/
+
+
+
+--Payment Trigger--
+
+DROP TRIGGER payment_id_trigger;
+CREATE OR REPLACE TRIGGER payment_id_trigger
+BEFORE INSERT ON Payment
+FOR EACH ROW
+BEGIN
+    IF :NEW.payment_id IS NULL THEN
+        SELECT seq_payment_id.NEXTVAL INTO :NEW.payment_id FROM SYS.DUAL;
+    END IF;
+END;
+/

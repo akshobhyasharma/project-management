@@ -1,0 +1,143 @@
+/*cart*/
+
+.title {
+    margin: 2.5vh 0;
+}
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto;
+    }
+}
+
+.card-container {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+@media(max-width:767px) {
+    .main-container {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+
+.title b {
+    font-size: 1.5rem;
+}
+
+.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
+}
+
+.incdec-link {
+    padding: 0 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+.close {
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+.prod-img {
+    width: 5.5rem;
+}
+
+.stock-span {
+    color: green;
+    padding: 0;
+}
+
+.out-stock {
+    color: rgb(209, 4, 4);
+}
+
+.back-to-shop {
+    margin-top: 4.5rem;
+}
+
+.cart-input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    margin-bottom: 3vh;
+    outline: none;
+    border-radius: 1rem;
+    width: 80%;
+    background-color: rgb(247, 247, 247);
+}
+
+.cart-input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.header-card {
+    border-bottom: 2px solid rgb(196, 192, 192);
+}
+
+.totals {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding: 2vh 0;
+}
+
+.sub-total,
+.total {
+    width: 100px;
+    border: none;
+    pointer-events: none;
+}
+
+.cart-button {
+    padding: 1px 8px;
+    border-radius: 6px;
+    background-color: #CEDCFE;
+    border: none;
+}
+
+.remove-btn {
+    &:nth-child(1) {
+        min-width: 98px;
+    }
+    @media(max-width:1480px) {
+        &:nth-child(1) {
+            margin-bottom: 10px;
+        }
+    }
+    @media(max-width:992px) {
+        &:nth-child(1) {
+            margin-bottom: 0;
+        }
+    }
+    &:hover {
+        background-color: rgb(209, 4, 4);
+    }
+}
+
+.move-button {
+    &:hover {
+        background-color: green;
+        color: white;
+    }
+}
+
+
+@media(max-width:1200px) 
+{
+    .remove-btn1
+    {
+        float: right;
+        margin-right: 10px;
+    }
+}

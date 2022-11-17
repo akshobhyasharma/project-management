@@ -1,0 +1,43 @@
+---Users Sequence---
+DROP SEQUENCE seq_user_id;
+CREATE SEQUENCE seq_user_id START WITH 1 INCREMENT BY 1; 
+
+---Shop Sequence---
+DROP SEQUENCE seq_shop_no;
+CREATE SEQUENCE seq_shop_no START WITH 100 INCREMENT BY 1; 
+
+---Product Sequence---
+DROP SEQUENCE seq_product_id;
+CREATE SEQUENCE seq_product_id START WITH 1000 INCREMENT BY 1; 
+
+---Images Sequence---
+DROP SEQUENCE seq_image_id;
+CREATE SEQUENCE seq_image_id START WITH 1 INCREMENT BY 1; 
+
+---Review Sequence---
+DROP SEQUENCE seq_review_id;
+CREATE SEQUENCE seq_review_id START WITH 1 INCREMENT BY 1; 
+
+---Cart Sequence---
+DROP SEQUENCE seq_cart_id;
+CREATE SEQUENCE seq_cart_id START WITH 1 INCREMENT BY 1; 
+
+---Cart_Items Sequence---
+DROP SEQUENCE seq_cart_item_no;
+CREATE SEQUENCE seq_cart_item_no START WITH 1 INCREMENT BY 1; 
+
+---Collection_Slot Sequence---
+DROP SEQUENCE seq_slot_no;
+CREATE SEQUENCE seq_slot_no START WITH 1 INCREMENT BY 1; 
+
+---Orders Sequence---
+DROP SEQUENCE seq_order_id;
+CREATE SEQUENCE seq_order_id START WITH 1 INCREMENT BY 1; 
+
+---Order_Product Sequence---
+DROP SEQUENCE seq_order_product_id;
+CREATE SEQUENCE seq_order_product_id START WITH 1 INCREMENT BY 1; 
+
+---Payment Sequence---
+DROP SEQUENCE seq_payment_id;
+CREATE SEQUENCE seq_payment_id START WITH 1 INCREMENT BY 1; 

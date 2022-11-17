@@ -1,0 +1,319 @@
+/*utilities*/
+
+.dec-none {
+    text-decoration: none;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-row {
+    padding-top: 50px;
+}
+
+@media(min-width:1200px) {
+    .margin-spot {
+        padding-left: 90px !important;
+    }
+    .margin-spot1 {
+        padding-left: 90px !important;
+    }
+    .margin-spot2 {
+        padding-left: 40px !important;
+    }
+}
+
+.copyright {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.underline:hover {
+    border-bottom: 2px #1b1a1a solid;
+}
+
+.underline-dark::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: black;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.underline-dark:hover::after {
+    opacity: 1;
+}
+
+.cursor-pointer:hover {
+    cursor: pointer
+}
+
+.mag-sm {
+    transition: transform 0.2s ease-in;
+}
+
+.mag-sm-2 {
+    transition: transform 0.2s ease-in;
+}
+
+.mag {
+    transition: transform 0.2s ease-in;
+}
+
+.mag-2 {
+    transition: transform 0.2s ease-in;
+}
+
+.mag:hover {
+    transform: scale(1.2);
+}
+
+.mag-2:hover {
+    transform: scale(1.5);
+}
+
+.mag-sm img:hover {
+    transform: scale(1.04);
+}
+
+.mag-sm-2:hover {
+    transform: scale(1.03);
+}
+
+.jump {
+    transition: transform 0.2s ease-in;
+}
+
+.jump:hover {
+    transform: translateY(-8px);
+}
+
+.click-jump {
+    transition: transform 0.2s ease-in;
+}
+
+.click-jump:active {
+    transform: translateY(-8px);
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: gray !important;
+}
+
+.search-icon:hover {
+    cursor: pointer;
+}
+
+.custom-font {
+    font-size: 1.0rem;
+    color: black;
+}
+
+.fab {
+    color: #1b1a1a;
+}
+
+.fill {
+    color: red;
+}
+
+.white-logo {
+    color: white;
+}
+
+.ext-rounded {
+    border-radius: 10px;
+}
+
+.ext-m-rounded {
+    border-radius: 15px;
+}
+
+.ext-ext-rounded {
+    border-radius: 20px;
+}
+
+.black-bg {
+    background-color: #1b1a1a;
+}
+
+.white-font {
+    color: #FCFBFA;
+}
+
+.link-white {
+    color: #FCFBFA;
+}
+
+.link-white:hover {
+    color: #FCFBFA;
+}
+
+.nav-input {
+    padding-left: 30px;
+}
+
+.bg-grey {
+    background-color: #c9c9c9;
+}
+
+.m-sm {
+    margin: 0.15rem;
+}
+
+.resp-img {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    //transition: ease-in;
+}
+
+a {
+    cursor: pointer !important;
+}
+
+.skyblue-txt {
+    color: #34b4eb;
+}
+
+//secondary navbar
+.sec-navbar {
+    transform: translateY(3px);
+   
+}
+
+
+// top stick navbar
+
+.sticky-navbar
+{
+   position: sticky;
+   top: 0;
+   z-index: 999;
+}
+
+
+.sticky-navbar1
+{
+   position: sticky;
+   top: 55px;
+   z-index: 3;
+}
+
+.cart-icon{
+    position: relative;
+  
+    .cart-quantity
+    {
+      position: absolute;
+      color: red;
+      top: -8px;
+      left: 40px;
+      
+    }
+  }
+
+.heart-icon {
+    position: relative;
+    .heart-badge {
+        position: absolute;
+        top: 0px;
+        right: -7px;
+        padding: 0.21rem 0.38rem !important;
+    }
+}
+
+@media(max-width:576px) {
+    .last-one {
+        margin: auto auto;
+    }
+}
+
+.top-navbar {
+    .top-dropdown {
+        #dropdownMenuLink {
+            color: whitesmoke;
+        }
+        a {
+            background: none;
+            color: black;
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        ul {
+            z-index: 999;
+            li {
+                a:hover {
+                    background-color: grey;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.navbar {
+    .navbar-toggler {
+        border-color: #1b1a1a !important;
+        &:focus {
+            box-shadow: 0 0 0 .12rem #1b1a1a !important;
+        }
+    }
+}
+
+.menu-icon {
+    transition: transform 0.2s ease-in;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width:767px) {
+    .menu-icon:hover {
+        transform: none;
+    }
+}
+
+//Sidebar navigation
+.sidebar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sidebar-img1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.offcanvas {
+    background-color: #1b1a1a;
+    color: white;
+}
+
+.ps-3 {
+    a {
+        color: white !important;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,137 @@
+---Users Table---
+
+DROP TABLE Users CASCADE CONSTRAINTS;
+CREATE TABLE Users 
+(
+    user_id INT PRIMARY KEY,
+    role VARCHAR2(10) NOT NULL CHECK (role IN ('Customer', 'Trader', 'Admin')),
+    fullname VARCHAR2(50) NOT NULL,
+    email VARCHAR2(50) NOT NULL UNIQUE,
+    password VARCHAR2(200) NOT NULL,
+    address VARCHAR2(50) NOT NULL,
+    contact INT NOT NULL,
+    user_date DATE NOT NULL,
+    gender VARCHAR2(10),
+    verified VARCHAR2(5) NOT NULL CHECK (verified IN ('Yes', 'No'))
+);
+
+
+---Shop Table----
+DROP TABLE Shop CASCADE CONSTRAINTS;
+CREATE TABLE Shop 
+(
+    shop_no INT PRIMARY KEY,
+    user_id INT REFERENCES Users (user_id),
+    shop_name VARCHAR2(50) NOT NULL UNIQUE,
+    address VARCHAR2(50),
+    contact INT,
+    authorized VARCHAR2(5) NOT NULL CHECK (authorized IN ('Yes', 'No'))
+);
+
+
+---Product Table---
+DROP TABLE Product CASCADE CONSTRAINTS;
+CREATE TABLE Product
+(
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR2(50) NOT NULL UNIQUE,
+    description VARCHAR2(200) NOT NULL,
+    price FLOAT NOT NULL,
+    stock INT NOT NULL,
+    allergy_information VARCHAR2(200),
+    discount INT,
+    category VARCHAR2(20) NOT NULL,
+    approve VARCHAR2(5) NOT NULL CHECK (approve IN ('Yes', 'No')),
+    shop_no INT REFERENCES Shop (shop_no)
+      
+);
+
+---Images Table--
+DROP TABLE Images CASCADE CONSTRAINTS;
+CREATE TABLE Images 
+(
+    image_id INT PRIMARY KEY,
+    image_name VARCHAR2(50) NOT NULL,
+    product_id INT REFERENCES Product(product_id)
+);
+
+--Review Table--
+DROP TABLE Review CASCADE CONSTRAINTS;
+CREATE TABLE Review
+(
+    review_id INT PRIMARY KEY,
+    message VARCHAR2(200),
+    rating FLOAT,
+    user_id INT REFERENCES Users(user_id),
+    product_id INT REFERENCES Product(product_id)
+);
+
+---Cart Table---
+DROP TABLE Cart CASCADE CONSTRAINTS;
+CREATE TABLE Cart
+(
+    cart_id INT PRIMARY KEY,
+    user_id INT REFERENCES Users(user_id) UNIQUE
+);
+
+
+---Cart_Items Table---
+DROP TABLE Cart_Items CASCADE CONSTRAINTS;
+CREATE TABLE Cart_Items
+(
+    cart_item_no INT PRIMARY KEY,
+    product_quantity INT NOT NULL,
+    product_id INT REFERENCES Product(product_id),
+    cart_id INT REFERENCES Cart(cart_id),
+    wishlist VARCHAR2(5) NOT NULL CHECK (wishlist IN ('Yes', 'No'))
+   
+);
+
+--Collection_Slot Table--
+DROP TABLE Collection_Slot CASCADE CONSTRAINTS;
+CREATE TABLE Collection_Slot
+(
+    slot_no INT PRIMARY KEY,
+    slot_day DATE NOT NULL,
+    slot_time VARCHAR2(20) NOT NULL,
+    total_orders INT
+);
+
+
+--Orders Table---
+DROP TABLE Orders CASCADE CONSTRAINTS;
+CREATE TABLE Orders
+(
+    order_id INT PRIMARY KEY,
+    total_quantity INT NOT NULL,
+    subtotal FLOAT NOT NULL,
+    total_price FLOAT NOT NULL,
+    status VARCHAR2(15) NOT NULL CHECK (status IN ('Purchased', 'Pending')),
+    cart_id INT REFERENCES Cart(cart_id),
+    slot_no INT REFERENCES Collection_Slot(slot_no)
+   
+    
+);
+
+--Order_Product--
+DROP TABLE Order_Product CASCADE CONSTRAINTS;
+CREATE TABLE Order_Product
+(
+    order_product_id INT PRIMARY KEY,
+    prod_quantity INT NOT NULL,
+    product_id INT REFERENCES Product(product_id),
+    order_id INT REFERENCES Orders(order_id)
+);
+
+
+---Payment Table--
+DROP TABLE Payment CASCADE CONSTRAINTS;
+CREATE TABLE Payment
+(
+    payment_id INT PRIMARY KEY,
+    payment_date DATE NOT NULL,
+    total_amount FLOAT NOT NULL,
+    order_id INT REFERENCES Orders(order_id),
+    user_id INT REFERENCES Users(user_id)
+);
+

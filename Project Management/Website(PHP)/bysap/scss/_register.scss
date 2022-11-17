@@ -1,0 +1,46 @@
+/*register*/
+.form-box{
+    height: 850px;
+    position: relative;
+    overflow: hidden;
+    
+   
+  }
+  .reg-error
+  {
+   
+    text-align: center;
+    color: red;
+  }
+  
+  .btnregister{
+    width: 150px;
+  }
+
+  .inputs{
+    
+      position: absolute;
+      width: 65%;
+      transition: .5s;
+      margin: auto;
+  }
+  
+  
+  #customer{
+      top: 140px;
+      left: 18%;
+  }
+  
+  
+  #trader{
+    top: 140px;
+    left: -1000px;
+  }
+  
+  .skyblue-txt{
+  color:#34b4eb;
+  }
+  
+  .selected{
+  font-weight: 700;
+  }

@@ -1,0 +1,169 @@
+/*cart*/
+
+.title {
+    margin: 2.5vh 0;
+}
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto;
+    }
+}
+
+.card-container {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+@media(max-width:767px) {
+    .main-container {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+
+.summary {
+    background-color: rgb(255, 255, 255);
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+    border-left: 1px solid gray;
+    border-top: none;
+}
+
+@media(max-width:992px) {
+    .summary {
+        border-left: none;
+        border-top: 1px solid gray;
+    }
+}
+
+@media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
+    }
+}
+
+.title b {
+    font-size: 1.5rem;
+}
+
+.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
+}
+
+.incdec-link {
+    padding: 0 1vh;
+    text-decoration: none;
+    color: black;
+}
+
+.prod-img {
+    width: 5.5rem;
+}
+
+.stock-span {
+    color: green;
+    padding: 0;
+}
+
+.out-stock {
+    color: rgb(209, 4, 4);
+}
+
+.cart-input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    margin-bottom: 3vh;
+    outline: none;
+    border-radius: 1rem;
+    width: 80%;
+    background-color: rgb(247, 247, 247);
+}
+
+.cart-input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.header-card {
+    border-bottom: 2px solid rgb(196, 192, 192);
+}
+
+.totals {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding: 2vh 0;
+}
+
+.sub-total,
+.total {
+    width: 100px;
+    border: none;
+    pointer-events: none;
+}
+
+.cart-button {
+    padding: 1px 8px;
+    border-radius: 6px;
+    background-color: #CEDCFE;
+    border: none;
+}
+
+.remove-btn {
+    &:hover {
+        background-color: rgb(209, 4, 4);
+    }
+}
+
+.btn-minus,
+.btn-plus {
+    display: flex;
+    position: relative;
+    width: 22px;
+    height: 23px;
+    border: 1px solid #8F8F9D;
+    color: #8F8F9D;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    &:hover {
+        background-color: rgb(157, 176, 184);
+        color: white;
+    }
+    &:active {
+        background-color: rgb(131, 149, 158);
+        color: white;
+    }
+    .fa-plus {
+        pointer-events: none !important;
+    }
+    .fa-minus {
+        pointer-events: none !important;
+    }
+}
+
+.quantity {
+    width: 25px;
+    height: 23px;
+    margin: 0px 5px;
+    pointer-events: none;
+}
+
+@media(max-width:1200px) 
+{
+    .remove-btn1
+    {
+        float: right;
+    }
+}

@@ -1,0 +1,38 @@
+.ordersumm {
+    background: #EDEDED;
+    color: black;
+    padding: 50px 50px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    height: 400px;
+}
+
+.form {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.summary-content {
+    .summary-text {
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 5px;
+    }
+    .summary-price {
+        font-size: 1.1em;
+    }
+    div {
+        span:nth-child(2) {
+            float: right;
+        }
+    }
+    .checkout-btn {
+        white-space: nowrap;
+        background-color: black;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        padding: 6px;
+    }
+}

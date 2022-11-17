@@ -1,0 +1,306 @@
+--Users Table--
+
+--Customers--
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, gender, verified)
+VALUES ('Customer','Seema Shrestha','seemashrestha01@gmail.com','a6c166ee03b30addb61ed97d10d46ef2f2cdfca9','Gokarna',9841436411,'10-18-1998', 'Female','Yes');
+
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, gender, verified)
+VALUES ('Customer','Arika Niroula','niroula.arika@gmail.com','645f54dc35274d135a8b847391d77fa3513b2b64','Imadol',9861142764,'11-03-1999', 'Female','No');
+
+--Traders---
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, verified)
+VALUES ('Trader','Emma Shrestha','emmashrestha07@gmail.com','a6c166ee03b30addb61ed97d10d46ef2f2cdfca9','Attarkhel',9841436411,'10-18-2018','Yes');
+
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, verified)
+VALUES ('Trader','Akshobhya Sharma','akshobhyasharma@gmail.com','e9989e6735c7d9d5edad366ae6633e4148c7a83b','Bhaisipati',9808065355,'05-20-2012','Yes');
+
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, verified)
+VALUES ('Trader','Sajjal Koirala','sajjal321koirala@gmail.com','129efdd32193ac207545b16dfea0adcbbc569585','Biratnagar',9865658988,'12-12-2015','Yes');
+
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, verified)
+VALUES ('Trader','Praveen Mahato','mpraveeen18@tbc.edu.np','09096f6a84050237bd0fa5cd2dcb6e327f64e37a','Baneshwor',9811724115,'02-15-2019','Yes');
+
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, verified)
+VALUES ('Trader','Dipesh Shrestha','shrestha.dipesh1999@gmail.com','a6c166ee03b30addb61ed97d10d46ef2f2cdfca9','Samakhusi',9843809482,'08-07-2014','Yes');
+
+INSERT INTO Users(role, fullname, email, password, address, contact, user_date, verified)
+VALUES ('Trader','Rohit Pandey','rpandey@thebritishcollege.edu.np','5b21afc423b99199c626fc00988f807599ab8331','Thapathali',9851047572,'01-18-2020','No');
+
+--Shop Table--
+INSERT INTO Shop (user_id, shop_name, address, contact, authorized) VALUES (3, 'Dream Deli', 'Cleckhuddersfax', 014916491, 'Yes');
+INSERT INTO Shop (user_id, shop_name, address, contact, authorized) VALUES (4, 'The Poultry King', 'Cleckhuddersfax', 014978960, 'Yes');
+INSERT INTO Shop (user_id, shop_name, address, contact, authorized) VALUES (5, 'Bake and Take', 'Cleckhuddersfax', 014978978, 'Yes');
+INSERT INTO Shop (user_id, shop_name, address, contact, authorized) VALUES (6, 'North Bay Fisheries', 'Cleckhuddersfax', 014956821, 'Yes');
+INSERT INTO Shop (user_id, shop_name, address, contact, authorized) VALUES (7, 'The Grocery Outlet', 'Cleckhuddersfax', 014910011, 'Yes');
+INSERT INTO Shop (user_id, shop_name, address, contact, authorized) VALUES (7, 'Fruits Basket', 'Cleckhuddersfax', 014956011, 'Yes');
+
+--Cart Table--
+INSERT INTO Cart (user_id) VALUES (1);
+
+
+--Product Table--
+--Delicacy--
+INSERT INTO Product (product_name, description, price, stock, allergy_information, discount, category,approve, shop_no)
+VALUES ('Pizza Di Casa Mia', 'Tomato sauce,mozzarella, sun-dried tomatoes, rocket, oregano, garlic', 7.50, 20, 'People with wheat, garlic, tomatoes, or cheese allergies must proceed with caution when eating this pizza.',5, 'Delicacy','Yes', 100);
+
+INSERT INTO Product (product_name, description, price, stock, allergy_information, discount, category,approve, shop_no)
+VALUES ('Spaghetti Tomato Basil', 'Spaghetti tomato sauce with fresh basil', 4.50, 10, 'Contains allergen like wheat, tomatoes, and basil.',7, 'Delicacy','Yes', 100);
+
+INSERT INTO Product (product_name, description, price, stock, allergy_information, category,approve, shop_no)
+VALUES ('Grilled Pork Chops', 'Barbeque glaze pork chops served with roasted garlic and rosemary potatoes', 7.95, 20, 'Contains allergen like garlic and rosemary.', 'Delicacy','Yes', 100);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Greek Salad', 'Feta cheese, black olives, cucumber, onion, bell pepper, tomato with balsamic vinaigrette dressing', 3.70, 15, 'Delicacy','Yes', 100);
+
+--Meat--
+INSERT INTO Product (product_name, description, price, stock, discount, category,approve, shop_no)
+VALUES ('Breast Quarters', 'Halves has been further cut into which include the wing. A breast quarter, including portions of the back, is all white meat.', 4.50, 40, 10,'Meat','Yes', 101);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Whole Chicken', 'The chicken with all parts intact, generally including the giblets stuffed in the cavity. Consists of white and dark meat.', 11.99, 80, 'Meat','Yes', 101);
+
+INSERT INTO Product (product_name, description, price, stock,discount, category,approve, shop_no)
+VALUES ('Chicken Drumsticks', 'Drumsticks include the lower portion of the leg quarter (the portion between the knee joint and the hock).', 6.99, 60, 2,'Meat','Yes', 101);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Whole Chicken Wings', 'The whole chicken wing is an all-white meat portion composed of three sections; the drumette, mid, section, and tip.', 4.99, 40, 'Meat','Yes', 101);
+
+INSERT INTO Product (product_name, description, price, stock, discount, category,approve, shop_no)
+VALUES ('8 - Piece Cut', 'The whole bird is cut into 2 breast halves with ribs and back portion, 2 wings, 2 thighs with back portion and 2 drumsticks.', 7.99, 50, 4, 'Meat','Yes', 101);
+
+
+--Bakery Items--
+
+INSERT INTO PRODUCT (product_name, description, price, stock, allergy_information, discount, category,approve, shop_no)
+VALUES('Carrot Bread', 'A sweet taste of carrot brad mixed with carrot grits with chocolate chips, raisins and walnuts', 3.5, 150, 'It contains following allergens: Diary, Nuts, Cocoa and Wheat', 15, 'Bakery','Yes', 102);
+
+INSERT INTO Product (product_name, description, price, stock, allergy_information, category,approve, shop_no)
+VALUES ('Chocolate Chip Cookies', 'Salt and chewly hotly served baked sweet chocolate chip cookies mixed with real chocolates and topped with chocolate chips.',2.5 , 100, 'Contains allergen like flour, eggs and cocoa powder', 'Bakery','Yes', 102);
+
+INSERT INTO PRODUCT (product_name, description, price, stock, allergy_information, discount, category,approve, shop_no)
+VALUES('Coconut Snowball', 'A vanilla cupcake topped with vanilla buttercream and rolledd in flaky coconut.', 1.5, 80, 'It contains following allergens: Dairy, Coconut, and Wheat', 15, 'Bakery','Yes', 102);
+
+INSERT INTO Product (product_name, description, price, stock, allergy_information, category,approve, shop_no)
+VALUES ('Red Velvet Cake', 'Tasty red velvet cake spread with white and vanilla frosting, topped with white frosting.',  9.99, 20, 'It contains following allergens: Flour, Eggs and Dairy', 'Bakery','Yes', 102);
+
+
+--Fish Items--
+INSERT INTO Product (product_name, description, price, stock, discount, category,approve, shop_no)
+VALUES('Alaskan Salmon', 'Highly rich in protein; shiny and moist skin; plump and firm meat.', 8.50, 150, 2, 'Fish','Yes', 103);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no) 
+VALUES('Maine Lobster', 'Meat that is dense yet tender with the texture not as flaky as that of crab', 9.99, 50,'Fish','Yes', 103);
+
+INSERT INTO Product (product_name, description, price, stock, discount, category,approve, shop_no)
+VALUES('Malpeque Oysters', 'Oysters near Prince Edward Island spend the winter under ice; Butter/cream flavor, sweet and salty; plump and springy', 6.99, 200, 4,'Fish','Yes', 103);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES('Rainbow Trout Fish', 'Mild meat with delicate nut-like flavor and tender, flasky and soft flesh', 1.99, 30, 'Fish','Yes', 103);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES('Alaskan King Crab', 'Premium, cooked, Alaskan king crab legs and claws. Ready to eat, just heat.', 39.99, 40, 'Fish','Yes', 103);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES('Calamari Squid', 'Thin and mild flesh with thicker, more powerful meat with smooth texture', 3.99, 200,'Fish','Yes', 103);
+
+
+--Grocery Items--
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Cucumber', 'Organic, Crisp, cool, and refreshing to eat raw.', 0.75, 100, 'Greengrocery','Yes', 104);
+
+INSERT INTO Product (product_name, description, price, stock, discount, category,approve, shop_no)
+VALUES('Broccoli', 'High in dietary fibre and a number of vitamins and minerals; they are dark in color with firm stalks.', 2.39, 100, 10, 'Greengrocery','Yes', 104);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Onions', 'You can dice, slice or cut it in rings and put it in burgers and sandwiches. Onions emit a sharp flavour and fragrance once they are fried.', 0.49, 200, 'Greengrocery','Yes', 104);
+
+INSERT INTO Product (product_name, description, price, stock, discount, category,approve, shop_no)
+VALUES('Bell Pepper', 'Leaving a mild fruity flavour on the tastebuds with thick, shiny skin and fleshy texture inside.', 3.29, 150, 20, 'Greengrocery','Yes', 104);
+
+
+--Fruit Items--
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES('Strawberry', 'Strawberries are soft, sweet, bright red berries. You can make jam, pie, and more with strawberries.', 1.75, 250, 'Greengrocery','Yes', 105);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Mango', 'Cultivated in the foothills, it has irresistibly sweet, juicy and delicious taste with yellow skin.', 1.99, 50, 'Greengrocery','Yes', 105);
+
+INSERT INTO Product (product_name, description, price, stock,discount, category,approve, shop_no)
+VALUES ('Fresho Avocado', 'Ripe Avocados turn dark brown or Black in color. Any small black spots on the fruit is due to abrasion during harvesting or handling and does not affect the quality of the fruit.', 3.69, 150, 20, 'Greengrocery','Yes', 105);
+
+INSERT INTO Product (product_name, description, price, stock, category,approve, shop_no)
+VALUES ('Mixed Berries', 'Plump, smooth-skinned perfect little globes of juicy berries that have mostly sweet and slightly tart flavour.', 3.59, 100, 'Greengrocery','Yes', 105);
+
+
+
+--Review Table--
+INSERT INTO Review (rating, user_id, product_id) VALUES (2,1,1000);
+INSERT INTO Review (message, rating, user_id, product_id) VALUES ('First taste impressions - Wow! Flavoursome, and were super soft. Overall, a very tasty spaghetti with lots of freshness and depth.',5,1,1001);
+INSERT INTO Review (rating, user_id, product_id) VALUES (4,1,1002);
+
+INSERT INTO Review (rating, user_id, product_id) VALUES (3.5,1,1004);
+INSERT INTO Review (rating, user_id, product_id) VALUES (4,1,1005);
+INSERT INTO Review (message, rating, user_id, product_id) VALUES ('Looks exactly like in picture. Worth buying it.',5,1,1006);
+INSERT INTO Review (message,rating, user_id, product_id) VALUES ('Little bit expensive but tastes good enough.',2.5,1,1007);
+
+INSERT INTO Review (rating, user_id, product_id) VALUES (4.5,1,1009);
+INSERT INTO Review (rating, user_id, product_id) VALUES (2.5,1,1010);
+INSERT INTO Review (message, rating, user_id, product_id) VALUES ('I ordered some cupcakes for my party and they were fantastic. However, it was little dry.',3,1,1011);
+
+INSERT INTO Review (rating, user_id, product_id) VALUES (3,1,1014);
+INSERT INTO Review (rating, user_id, product_id) VALUES (3.5,1,1016);
+INSERT INTO Review (message, rating, user_id, product_id) VALUES ('I ordered dozen of oysters and found them bland, no juice of oysters on the shell. I will never come back for oysters.',1,1,1015);
+INSERT INTO Review (rating, user_id, product_id) VALUES (2,1,1017);
+
+INSERT INTO Review (message, rating, user_id, product_id) VALUES ('Fresh green solid thick cucumber had a crisp clean taste and made my salad really delicious.',4,1,1019);
+INSERT INTO Review (rating, user_id, product_id) VALUES (3.5,1,1021);
+INSERT INTO Review (rating, user_id, product_id) VALUES (2,1,1022);
+
+INSERT INTO Review (rating, user_id, product_id) VALUES (1.5,1,1023);
+INSERT INTO Review (message, rating, user_id, product_id) VALUES ('I was disappointed in the freshness. It got bruised with decaying round spot. Not sweet either!.',1,1,1024);
+INSERT INTO Review (rating, user_id, product_id) VALUES (3,1,1026);
+
+
+--Images Table--
+
+INSERT INTO Images (image_name, product_id) VALUES ('Pizza Di Casa Mia1',1000);
+INSERT INTO Images (image_name, product_id) VALUES ('Pizza Di Casa Mia2',1000);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Spaghetti Tomato Basil1',1001);
+INSERT INTO Images (image_name, product_id) VALUES ('Spaghetti Tomato Basil2',1001);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Grilled Pork Chops1',1002);
+INSERT INTO Images (image_name, product_id) VALUES ('Grilled Pork Chops2',1002);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Greek Salad1',1003);
+INSERT INTO Images (image_name, product_id) VALUES ('Greek Salad2',1003);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Breast Quarters1',1004);
+INSERT INTO Images (image_name, product_id) VALUES ('Breast Quarters2',1004);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Whole Chicken1',1005);
+INSERT INTO Images (image_name, product_id) VALUES ('Whole Chicken2',1005);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Chicken Drumsticks1',1006);
+INSERT INTO Images (image_name, product_id) VALUES ('Chicken Drumsticks2',1006);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Whole Chicken Wings1',1007);
+INSERT INTO Images (image_name, product_id) VALUES ('Whole Chicken Wings2',1007);
+
+INSERT INTO Images (image_name, product_id) VALUES ('8-Piece Cut1',1008);
+INSERT INTO Images (image_name, product_id) VALUES ('8-Piece Cut2',1008);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Carrot Bread1',1009);
+INSERT INTO Images (image_name, product_id) VALUES ('Carrot Bread2',1009);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Chocolate Chip Cookies1',1010);
+INSERT INTO Images (image_name, product_id) VALUES ('Chocolate Chip Cookies2',1010);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Coconut Snowball1',1011);
+INSERT INTO Images (image_name, product_id) VALUES ('Coconut Snowball2',1011);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Red Velvet Cake1',1012);
+INSERT INTO Images (image_name, product_id) VALUES ('Red Velvet Cake2',1012);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Alaskan Salmon1',1013);
+INSERT INTO Images (image_name, product_id) VALUES ('Alaskan Salmon2',1013);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Maine Lobster1',1014);
+INSERT INTO Images (image_name, product_id) VALUES ('Maine Lobster2',1014);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Malpeque Oysters1',1015);
+INSERT INTO Images (image_name, product_id) VALUES ('Malpeque Oysters2',1015);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Rainbow Trout Fish1',1016);
+INSERT INTO Images (image_name, product_id) VALUES ('Rainbow Trout Fish2',1016);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Alaskan King Crab1',1017);
+INSERT INTO Images (image_name, product_id) VALUES ('Alaskan King Crab2',1017);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Calamari Squid1',1018);
+INSERT INTO Images (image_name, product_id) VALUES ('Calamari Squid2',1018);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Cucumber1',1019);
+INSERT INTO Images (image_name, product_id) VALUES ('Cucumber2',1019);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Broccoli1',1020);
+INSERT INTO Images (image_name, product_id) VALUES ('Broccoli2',1020);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Onions1',1021);
+INSERT INTO Images (image_name, product_id) VALUES ('Onions2',1021);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Bell Pepper1',1022);
+INSERT INTO Images (image_name, product_id) VALUES ('Bell Pepper2',1022);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Strawberry1',1023);
+INSERT INTO Images (image_name, product_id) VALUES ('Strawberry2',1023);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Mango1',1024);
+INSERT INTO Images (image_name, product_id) VALUES ('Mango2',1024);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Fresho Avocado1',1025);
+INSERT INTO Images (image_name, product_id) VALUES ('Fresho Avocado2',1025);
+
+INSERT INTO Images (image_name, product_id) VALUES ('Mixed Berries1',1026);
+INSERT INTO Images (image_name, product_id) VALUES ('Mixed Berries2',1026);
+
+
+
+--Cart_items Table---
+INSERT INTO Cart_Items (product_quantity, product_id, cart_id,wishlist) VALUES (2, 1006,1, 'Yes');
+INSERT INTO Cart_Items (product_quantity, product_id, cart_id,wishlist) VALUES (3, 1016, 1, 'No');
+INSERT INTO Cart_Items (product_quantity, product_id, cart_id,wishlist) VALUES (4, 1026, 1, 'No');
+
+--Collection Slot Table--
+INSERT INTO Collection_Slot (slot_day, slot_time, total_orders) VALUES ('06/17/2021', '1pm-4pm',2);
+INSERT INTO Collection_Slot (slot_day, slot_time, total_orders) VALUES ('06/25/2021', '10am-1pm',3);
+INSERT INTO Collection_Slot (slot_day, slot_time, total_orders) VALUES ('07/01/2021', '1pm-4pm',2);
+INSERT INTO Collection_Slot (slot_day, slot_time, total_orders) VALUES ('07/02/2021', '4pm-7pm',1);
+
+--Orders Table--
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (2, 4.99, 4.99, 'Purchased', 1, 1 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (2, 6.99,6.99, 'Purchased', 1, 1 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (3, 88.99,88.99, 'Purchased', 1, 2 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (1, 14.99,14.99, 'Purchased', 1, 2 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (3, 40.99,40.99, 'Purchased', 1, 2 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (1, 2.99,2.99, 'Purchased', 1, 3 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (2, 10.99,10.99, 'Purchased', 1, 3 );
+INSERT INTO Orders (total_quantity, subtotal, total_price, status, cart_id, slot_no)
+VALUES (1, 1.99,1.99, 'Purchased', 1, 4 );
+
+
+--Order_Product Table
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (10, 1005,1);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (2, 1006,1);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (4, 1007,2);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (8, 1008,2);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (4, 1010,3);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (20, 1011,3);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (13, 1012,3);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (1, 1013,4);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (5, 1014,5);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (4, 1015,5);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (3, 1016,5);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (6, 1000,6);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (9, 1010,7);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (5, 1017,7);
+INSERT INTO Order_Product (prod_quantity, product_id, order_id) VALUES (7, 1022,8);
+
+
+--Payment Table--
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('06/17/2021', 4.99,1,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('06/17/2021', 6.99,2,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('06/25/2021', 88.99,3,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('06/25/2021', 14.99,4,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('06/25/2021', 40.99,5,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('07/01/2021', 2.99,6,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('07/01/2021', 10.99,7,1);
+INSERT INTO Payment (payment_date, total_amount, order_id, user_id) VALUES ('07/02/2021', 1.99,8,1);

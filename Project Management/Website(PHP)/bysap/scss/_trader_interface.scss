@@ -1,0 +1,106 @@
+.product-table
+{
+    a{
+        color: black;
+        margin: 2px;
+        &:nth-child(1)
+        {
+            &:hover{
+                color: green;
+            }
+        }
+        &:nth-child(2)
+        {
+            &:hover{
+                color: red;
+            }
+        }
+    }
+
+    th{
+        color: #96b4fa;
+        
+    }
+   
+}
+
+.product-top-container
+{
+    padding: 0 10px;
+    span {
+        display: inline-block;
+        font-size: 25px;
+        margin: 15px 0px;
+       
+    }
+    button {
+        float: right;
+        margin: 15px 0px;
+        background-color: #CEDCFE;
+        border: none;
+        color: black;
+       
+        &:focus, &:hover{
+            outline: none !important;
+            border: none !important;
+            background-color:  #80a3f7;
+        }
+    }
+}
+
+.shop-table
+{
+    th{
+        color: #96b4fa;   
+        
+    }
+    a{
+        color: black;
+        margin: 2px;
+        &:nth-child(1)
+        {
+            &:hover{
+                color: green;
+            }
+        }
+        &:nth-child(2)
+        {
+            &:hover{
+                color: red;
+            }
+        }
+    }
+    
+}
+.trader-form
+{
+    padding: 15px;
+    width: 70%;
+    margin: auto;
+
+    input
+    {
+        margin-bottom: 25px;
+        
+    }
+   
+    .modal-footer
+    {
+        button{
+            &:nth-child(1)
+            {
+                background-color: red;
+                border: none;
+                border-radius: 15px;
+            }
+            &:nth-child(2)
+            {
+                background-color: green;
+                border: none;
+                border-radius: 15px;
+            }
+        }
+        
+    }
+    
+}
